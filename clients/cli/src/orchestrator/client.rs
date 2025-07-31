@@ -81,8 +81,8 @@ impl OrchestratorClient {
         let response = self
             .client
             .get(&url)
-            .header("User-Agent", USER_AGENT)
-            .header("X-Build-Timestamp", BUILD_TIMESTAMP)
+            // .header("User-Agent", USER_AGENT)
+            // .header("X-Build-Timestamp", BUILD_TIMESTAMP)
             .send()
             .await?;
 
@@ -101,8 +101,8 @@ impl OrchestratorClient {
             .client
             .post(&url)
             .header("Content-Type", "application/octet-stream")
-            .header("User-Agent", USER_AGENT)
-            .header("X-Build-Timestamp", BUILD_TIMESTAMP)
+            // .header("User-Agent", USER_AGENT)
+            // .header("X-Build-Timestamp", BUILD_TIMESTAMP)
             .body(body)
             .send()
             .await?;
@@ -122,8 +122,8 @@ impl OrchestratorClient {
             .client
             .post(&url)
             .header("Content-Type", "application/octet-stream")
-            .header("User-Agent", USER_AGENT)
-            .header("X-Build-Timestamp", BUILD_TIMESTAMP)
+            // .header("User-Agent", USER_AGENT)
+            // .header("X-Build-Timestamp", BUILD_TIMESTAMP)
             .body(body)
             .send()
             .await?;
